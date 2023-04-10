@@ -72,11 +72,11 @@ class MyWindow(QMainWindow):
         vorname = self.vornameLineEdit.text()
         name = self.nameLineEdit.text()
         email = self.emailLineEdit.text()
-        geb = self.ageCalendarWidget.setDate()
+        geb = self.ageCalendarWidget.selectedDate().toString("yyyy-MM-dd")
         strasse = self.strasseLineEdit.text()
         plz = self.plzLineEdit.text()
         ort = self.ortLineEdit.text()
-        land = self.countries.text()
+        land = self.countries.currentText() 
         file.write(f"{vorname},{name},{email},{geb},{strasse},{plz},{ort},{land}")
         
 
